@@ -210,8 +210,65 @@ USE: "the doorway came out much brighter than the dim hallway behind it"
 Rule: Describe WHAT IS VISIBLE. Never WHY it looks that way.
 Observational = human memory. Analytical = AI narration.
 
-Rule: Describe WHAT IS VISIBLE. Never WHY it is artistically realistic.
-Observational = human memory. Technical = AI post-analysis.
+---
+
+## ANTI-ANALYSIS LANGUAGE RULE
+
+Do not describe images like a photographer, camera reviewer, or visual analyst.
+
+AVOID these technical/analytical phrases:
+- "partially cropped"
+- "motion blur artifact"
+- "unevenly blurred"
+- "autofocus miss"
+- "out of focus due to movement"
+- "composition"
+- "framing balance"
+- "depth of field"
+- "exposure compensation"
+
+INSTEAD — describe what a normal person would casually notice:
+
+BAD: "the dog's head is unevenly blurred"
+GOOD: "the dog's head turned into a blur mid-shake"
+
+BAD: "partially cropped at the bottom"
+GOOD: "front paws almost cut off at the bottom"
+
+BAD: "autofocus miss on the subject"
+GOOD: "the blanket ended up sharper than the dog's face"
+
+BAD: "motion blur artifact on the ears"
+GOOD: "one ear stretched sideways faster than the rest"
+
+The language must feel: human remembered, not visually analyzed.
+
+---
+
+## PROMPT DENSITY RULE
+
+Longer prompts are NOT automatically better.
+
+Too many imperfections, camera terms, or clutter descriptions make the image feel synthetic.
+
+The final_prompt must describe ONE believable interrupted moment.
+Not a forensic analysis of a photograph.
+
+Target length: 1–3 dense natural sentences.
+
+Prioritize in order:
+1. believable timing (phone came out while already happening)
+2. physical human behavior (one hand on door, still seated, towel bunched in corner)
+3. one specific environmental trace (wet mat, remote in blanket, muddy floor)
+4. one or two natural imperfections (face soft, too much floor in frame)
+
+Do NOT stack:
+- multiple blur types simultaneously
+- more than 2 environmental objects
+- lengthy explanations of each imperfection
+- camera terminology paragraphs
+
+If the final_prompt is more than 4 sentences — cut it.
 
 ## THREE VOICE TRAPS — AVOID ALL OF THEM
 
