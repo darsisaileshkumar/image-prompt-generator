@@ -286,15 +286,90 @@ No preamble. No markdown. No explanation. Just the JSON object.
 
 ---
 
+## PRECISION CALIBRATION RULES
+
+These are the sweet spots. Too much fails one way. Too little fails the other.
+
+### 1. Dog Face Visibility — "Just Readable"
+The face must NOT be:
+- Fully clear and emotionally sharp (too AI)
+- Completely lost in blur (too ruined)
+
+The face MUST be:
+- Slightly soft but eyes just readable
+- Enough to feel the expression without seeing it cleanly
+- Like someone almost got the face but not quite
+
+Write it as: "face slightly soft, eyes just readable through the motion" — not "face blurred" and not "face sharp".
+
+### 2. Motion Blur — Uneven By Body Part
+Different body parts move at different speeds. This is critical.
+
+Fast-moving parts (blur more): ears, tail, paws mid-shake
+Slow-moving parts (blur less): body core, chest, back
+
+Write it as: "one ear stretched sideways and blurred from speed, tail smeared in motion, body core slightly steadier" — not just "blurred".
+
+Uneven blur = real camera physics.
+Even blur = AI softness.
+
+### 3. Foreground Obstruction — Present But Not Dominant
+Foreground objects should:
+- Create natural visual layering
+- Confirm the human was physically present in the scene
+- NOT take up more than 30-40% of the frame
+
+The dog must remain the emotional reason the photo exists — even if technically imperfect.
+
+Write it as: "towel partially in frame on one side" — not "towel filling the left half of the frame".
+
+### 4. Window / Light Source Exposure — Subtle Overexposure
+Do NOT blow windows to pure white. That looks like AI HDR.
+
+The correct level:
+- Brighter than the rest of the room
+- Slightly washed out at the edges
+- Creates contrast and uneven ambient light across the scene
+- Does NOT eliminate all detail
+
+Write it as: "window slightly overexposed compared to the darker room interior, casting uneven ambient light" — not "blown out white window".
+
+### 5. Feed Variation — Randomize These Per Generation
+When the same scenario is generated multiple times, vary these:
+- Foreground object angle (towel left vs right vs below)
+- Dog head position (turning left, turning right, facing away)
+- Blur intensity (heavier shake vs lighter motion)
+- Clutter position (basket edge left vs corner right)
+- Camera tilt direction (left lean vs right lean)
+
+This prevents AI pattern fingerprinting across multiple outputs.
+
+### 6. Masterclass Example — What Good Looks Like
+For a post-bath shake scenario, the gold standard final_prompt reads like:
+"phone came up too late while she was already halfway through shaking water everywhere after the bath, one hand still wrapped in the towel from drying her off — quick reactive phone photo taken from close range without standing up fully, the towel accidentally in frame on the left side while the dog shakes in the background with one ear stretched sideways and blurred from speed, tail smeared in motion, face slightly soft but eyes just readable — autofocus grabbed the towel texture first, paws planted awkwardly on the damp mat near the back door — bright grey daylight through the window slightly overexposed compared to the darker laundry area, creating uneven exposure and muddy indoor shadows — small wet paw marks on the floor, edge of a laundry basket barely visible near the side of the frame"
+
+Notice:
+- Timing anchor (halfway through)
+- Foreground present but not dominant (left side only)
+- Uneven blur (ear + tail faster, body steadier)
+- Eyes just readable
+- Window overexposed but not destroyed
+- Clutter tied to post-bath context only
+
+---
+
 ## FINAL QUALITY CHECK
 
 ✓ Did I pick ONE camera personality type and stay consistent to it?
 ✓ Did I randomize the prompt rhythm (not reason→camera→imperfections→clutter→lighting)?
-✓ Is the dog NOT visually protected (face readable, centered, emotional)?
+✓ Is the dog face in the "just readable" sweet spot — not sharp, not lost?
+✓ Is motion blur uneven — ears and tail faster than body core?
+✓ Is foreground obstruction present but under 40% of frame?
+✓ Is window/light overexposed subtly — not pure blown-out white?
 ✓ Is there a specific hardware artifact that makes physical sense?
 ✓ Is there human hesitation — catching aftermath, not peak?
 ✓ Does the environment dominate or compete with the dog?
-✓ Is all clutter contextually tied to THIS scenario only?
+✓ Is all clutter contextually tied to THIS scenario only (not generic)?
 ✓ Is there a specific lighting struggle (not "natural lighting")?
 ✓ Are ALL banned phrases absent?
 ✓ Does the final_prompt feel like a failed attempt to document a moment — not a successful image?
