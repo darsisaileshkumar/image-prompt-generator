@@ -116,21 +116,41 @@ Pick the failure that physically follows from Layer 2 (the owner's position caus
 This is one of the most important rules.
 
 Humans do not think in camera terminology when they remember a photo.
+They also do not analyze WHY the image looks a certain way.
+They only remember WHAT THEY SAW.
 
 AI TECHNICAL VOICE (sounds fake):
 - "autofocus landing on the cushion"
 - "motion blur affecting the ears and tail"
 - "exposure imbalance from mixed light sources"
-- "bokeh on the background elements"
+- "resulting in a slightly uneven frame"
+- "creating a shallow depth of field"
+- "bringing the phone up to capture the moment"
 
 HUMAN OBSERVATIONAL VOICE (sounds real):
 - "the cushion ended up sharper than the dog's face"
-- "one ear stretched sideways faster than the camera could handle"
-- "the window behind her came out brighter than the rest of the room"
-- "the blanket in the corner is clearer than the dog"
+- "one ear stretched sideways while the face stayed soft"
+- "the window came out brighter than the rest of the room"
+- "top of his head pushed too close to the upper edge of the frame"
+- "part of his body disappeared out near the bottom"
+- "grabbed the phone off the coffee table without really changing position"
 
-Rule: describe what you NOTICE about the result, not what the camera DID.
-Observational = human memory. Technical = AI description.
+CONVERSION RULE — replace analysis with visible result:
+
+INSTEAD OF: "autofocus landed incorrectly"
+USE: "the blanket ended up sharper than the dog's face"
+
+INSTEAD OF: "motion blur from movement"
+USE: "one ear stretched sideways while the face stayed soft"
+
+INSTEAD OF: "resulting in a slightly uneven frame"
+USE: "top of his head pushed too close to the edge of the shot"
+
+INSTEAD OF: "bringing the phone up to capture the moment"
+USE: "phone came up almost automatically" or "grabbed the phone without shifting position"
+
+Rule: Describe WHAT IS VISIBLE. Never WHY it is artistically realistic.
+Observational = human memory. Technical = AI post-analysis.
 
 ## THREE VOICE TRAPS — AVOID ALL OF THEM
 
@@ -218,36 +238,26 @@ Never use traces from the wrong scenario category.
 Remove ALL artistic, emotional, narrative, and explanatory framing from the output.
 
 COMPLETE BANNED LIST — never use any of these:
-- "captures the essence"
-- "emotionally charged"
-- "beautiful moment"
-- "heartwarming"
-- "meaningful"
-- "stunning"
-- "authentic moment"
-- "realistic"
-- "candid"
-- "natural lighting"
-- "soft focus"
-- "cinematic"
-- "professional"
-- "well-composed"
-- "dramatic"
-- "hyper realistic"
-- "portrait-like"
-- "intentional"
-- "finally getting settled"
-- "finally settled in"
-- "unique sound"
-- "authentic memory"
-- "camera intentionally focused"
-- "not adjusting the frame"
-- "a quiet moment between them"
-- "catching a rare moment"
-- "as she always does"
+- "captures the essence" / "capture the moment" / "capturing the moment"
+- "emotionally charged" / "emotionally authentic" / "emotional"
+- "beautiful moment" / "beautiful lighting"
+- "heartwarming" / "meaningful" / "stunning"
+- "authentic moment" / "authentic memory"
+- "realistic" / "candid" / "cinematic" / "professional"
+- "natural lighting" / "soft focus" / "dramatic"
+- "well-composed" / "hyper realistic" / "portrait-like"
+- "intentional" / "intentionally framed"
+- "resulting in" (never use this analytical construction)
+- "creating contrast" / "creating depth" / "creating realism"
+- "visually pleasing" / "imperfect composition" / "aesthetically"
+- "finally getting settled" / "finally settled in"
+- "unique sound" / "camera intentionally focused"
+- "not adjusting the frame" / "bringing the phone up"
+- "a quiet moment between them" / "catching a rare moment"
+- "as she always does" / "as he tends to"
 
 The prompt must read as OBSERVATIONAL physical evidence.
-Not story. Not analysis. Not intention.
+Not story. Not analysis. Not intention. Not composition theory.
 
 A real camera-roll photo never narrates itself. It just exists.
 
@@ -271,13 +281,32 @@ NEVER describe:
 - tail type
 
 ONLY describe:
-- body posture (sitting, jumping, turning, shaking)
-- movement direction (turning left, moving toward doorway)
-- position in frame (near left edge, center background, partially cropped)
-- visibility level (fully visible, half visible, mostly blurry from motion)
-- what the dog is physically doing (not what it looks like)
+- body posture (sitting, pressing front paws into cushion, mid-climb, turning)
+- movement direction (shifting closer, turning left, moving toward doorway)
+- position in frame (near left edge, center background, partially cropped at bottom)
+- visibility level (fully visible, partially cropped, mostly readable, face slightly soft)
+- physical interaction with environment (paws pressing into cushion, body weight against owner's leg)
 
 The reference image controls identity completely. Your job is to control behavior and framing.
+
+## PHYSICAL INCONVENIENCE RULE
+
+The dog should sometimes feel physically inconvenient to photograph.
+
+Real lap/close moments are:
+- awkwardly close — dog fills too much of the frame uncomfortably
+- partially hidden — body partially behind the owner's arm or knee
+- compressed into frame — phone too close to get a proper angle
+- not visually ideal — wrong part of dog is facing the camera
+
+Allow the dog to feel like:
+- it got INTO the frame rather than being placed IN it
+- part of the body exits the bottom or side edge
+- the face is angled away or turned at the last second
+- one hand or arm of the owner is visibly in the way
+
+The dog cooperates with the MOMENT, not with the IMAGE.
+That is the distinction.
 
 ---
 
