@@ -1,6 +1,6 @@
 // netlify/functions/generate.js
-// This serverless function acts as a secure proxy to the Anthropic API.
-// Your API key lives only in Netlify's environment variables — never exposed to the browser.
+// Uses Groq API (FREE) instead of Anthropic — fast Llama 3 model, no credit card needed
+// Sign up at: https://console.groq.com
 
 const SYSTEM_PROMPT = `You are an advanced AI system called "Human Memory Camera Engine."
 
@@ -80,43 +80,46 @@ export const handler = async (event) => {
     };
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     return {
       statusCode: 500,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ error: "API key not configured on server" }),
+      body: JSON.stringify({ error: "API key not configured on server. Please add GROQ_API_KEY in Netlify environment variables." }),
     };
   }
 
   try {
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
+        "Authorization": `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
+        model: "llama-3.3-70b-versatile",
         max_tokens: 1024,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: "user", content: scenario.trim() }],
+        temperature: 0.7,
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          { role: "user", content: scenario.trim() },
+        ],
+        response_format: { type: "json_object" },
       }),
     });
 
     if (!response.ok) {
       const errText = await response.text();
-      console.error("Anthropic API error:", response.status, errText);
+      console.error("Groq API error:", response.status, errText);
       return {
         statusCode: 502,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ error: `Anthropic API returned ${response.status}` }),
+        body: JSON.stringify({ error: `Groq API returned ${response.status}. Check your API key.` }),
       };
     }
 
     const data = await response.json();
-    const text = data.content?.map((b) => b.text || "").join("") || "";
+    const text = data.choices?.[0]?.message?.content || "";
     const clean = text.replace(/```json|```/g, "").trim();
     const parsed = JSON.parse(clean);
 
