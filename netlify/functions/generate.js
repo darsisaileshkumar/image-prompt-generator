@@ -129,8 +129,62 @@ HUMAN OBSERVATIONAL VOICE (sounds real):
 - "the window behind her came out brighter than the rest of the room"
 - "the blanket in the corner is clearer than the dog"
 
-Rule: describe what you NOTICE about the image, not what the camera DID.
+Rule: describe what you NOTICE about the result, not what the camera DID.
 Observational = human memory. Technical = AI description.
+
+## THREE VOICE TRAPS — AVOID ALL OF THEM
+
+These three voices all sound AI-generated. The prompt must use NONE of them.
+
+### TRAP 1 — NARRATOR VOICE
+This is story-telling language that sounds intentional and literary.
+
+BAD (narrator voice):
+- "finally getting settled"
+- "a quiet moment between them"
+- "as he always does"
+- "catching a rare still moment"
+- "the way she always waits"
+
+GOOD (observational replacement):
+- "already halfway onto my lap again"
+- "already there when the phone came out"
+- "same thing she does every morning"
+- "still mid-way through climbing up"
+
+### TRAP 2 — EXPLANATION VOICE
+This explains WHY something happened instead of describing WHAT appeared.
+
+BAD (explanation voice):
+- "the rest of the room a blur from not adjusting the frame"
+- "camera couldn't compensate for the low light"
+- "background out of focus due to shallow depth"
+- "slight overexposure from the window light source"
+
+GOOD (result description):
+- "too much empty couch and background stayed in the shot"
+- "the background ended up soft and messy"
+- "the window behind came out much brighter than the room"
+- "the side table and remote are sharper than the dog"
+
+Describe the RESULT. Not the CAUSE or the REASONING behind it.
+
+### TRAP 3 — INTENTION VOICE
+This states what the owner was consciously doing instead of showing physical evidence.
+
+BAD (intention voice):
+- "while I was still seated with one hand petting him"
+- "she tried to capture the moment before it passed"
+- "owner deliberately kept the phone low"
+- "shot taken without adjusting composition"
+
+GOOD (physical evidence):
+- "one hand still resting against his shoulder near the bottom edge of the frame"
+- "knee and part of a blanket still in frame"
+- "phone tilted because it came up from the side table without being straightened"
+- "arm extended but body didn't move from the couch"
+
+Imply body position through what APPEARS in the frame. Never state what the owner intended or was trying to do.
 
 ---
 
@@ -161,9 +215,9 @@ Never use traces from the wrong scenario category.
 
 ## LAYER 5 — NON-CINEMATIC LANGUAGE
 
-Remove ALL artistic and emotional framing from the output.
+Remove ALL artistic, emotional, narrative, and explanatory framing from the output.
 
-STILL BANNED (update: these were found in recent outputs):
+COMPLETE BANNED LIST — never use any of these:
 - "captures the essence"
 - "emotionally charged"
 - "beautiful moment"
@@ -182,10 +236,20 @@ STILL BANNED (update: these were found in recent outputs):
 - "hyper realistic"
 - "portrait-like"
 - "intentional"
+- "finally getting settled"
+- "finally settled in"
+- "unique sound"
+- "authentic memory"
+- "camera intentionally focused"
+- "not adjusting the frame"
+- "a quiet moment between them"
+- "catching a rare moment"
+- "as she always does"
 
-The prompt must read as OBSERVATIONAL, not artistic.
+The prompt must read as OBSERVATIONAL physical evidence.
+Not story. Not analysis. Not intention.
 
-A real camera-roll photo never thinks about what it "captures." It just happened.
+A real camera-roll photo never narrates itself. It just exists.
 
 ---
 
