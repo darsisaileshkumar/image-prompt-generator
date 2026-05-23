@@ -113,19 +113,43 @@ Pick the failure that physically follows from Layer 2 (the owner's position caus
 
 ## CRITICAL — OBSERVATIONAL LANGUAGE, NOT TECHNICAL NARRATION
 
+## ⛔ SINGLE MOST IMPORTANT RULE — READ FIRST
+
+"RESULTING IN" IS ABSOLUTELY BANNED.
+
+Never write:
+- "resulting in the dog's face being soft"
+- "resulting in a tilted frame"
+- "resulting in the background being out of focus"
+- "resulting in overexposure near the window"
+
+This construction ALWAYS sounds like AI post-analysis.
+
+INSTEAD — describe the visible reality directly:
+- "the dog's face stayed slightly soft from the movement"
+- "the doorway edge cuts into the left side of the picture"
+- "the background ended up soft and messy"
+- "the window came out much brighter than the rest of the room"
+
+This is non-negotiable. No exceptions.
+
+---
+
 This is one of the most important rules.
 
 Humans do not think in camera terminology when they remember a photo.
 They also do not analyze WHY the image looks a certain way.
 They only remember WHAT THEY SAW.
 
-AI TECHNICAL VOICE (sounds fake):
+AI TECHNICAL / ANALYTICAL VOICE (sounds fake):
 - "autofocus landing on the cushion"
 - "motion blur affecting the ears and tail"
 - "exposure imbalance from mixed light sources"
-- "resulting in a slightly uneven frame"
+- "resulting in a slightly uneven frame" ← BANNED
 - "creating a shallow depth of field"
 - "bringing the phone up to capture the moment"
+- "impending shake" ← too literary, sounds written
+- "already bracing for impact" ← too cinematic
 
 HUMAN OBSERVATIONAL VOICE (sounds real):
 - "the cushion ended up sharper than the dog's face"
@@ -134,8 +158,13 @@ HUMAN OBSERVATIONAL VOICE (sounds real):
 - "top of his head pushed too close to the upper edge of the frame"
 - "part of his body disappeared out near the bottom"
 - "grabbed the phone off the coffee table without really changing position"
+- "already bracing for the water shake" ← physical, not literary
+- "towel already half lifted before the dog shook again" ← action, not prediction
 
-CONVERSION RULE — replace analysis with visible result:
+CONVERSION TABLE — replace every analytical phrase with visible observation:
+
+INSTEAD OF: "resulting in the dog's face being soft"
+USE: "the dog's face stayed slightly soft from the movement"
 
 INSTEAD OF: "autofocus landed incorrectly"
 USE: "the blanket ended up sharper than the dog's face"
@@ -147,7 +176,16 @@ INSTEAD OF: "resulting in a slightly uneven frame"
 USE: "top of his head pushed too close to the edge of the shot"
 
 INSTEAD OF: "bringing the phone up to capture the moment"
-USE: "phone came up almost automatically" or "grabbed the phone without shifting position"
+USE: "phone came up while the dog was already moving"
+
+INSTEAD OF: "impending shake"
+USE: "already bracing for the water shake" or "towel half lifted before the next shake"
+
+INSTEAD OF: "resulting in overexposure"
+USE: "the doorway came out much brighter than the dim hallway behind it"
+
+Rule: Describe WHAT IS VISIBLE. Never WHY it looks that way.
+Observational = human memory. Analytical = AI narration.
 
 Rule: Describe WHAT IS VISIBLE. Never WHY it is artistically realistic.
 Observational = human memory. Technical = AI post-analysis.
@@ -218,6 +256,7 @@ Match the context:
 Post-bath / laundry: damp towel corner, wet paw print trail on floor, bath bottle edge, laundry basket side, damp mat
 Waking up / bedroom: charger cable on floor, pillow corner, rumpled sheet edge, lamp base, sock near bed
 Arriving home / entryway: shoes near door, bag against wall, someone's knee or hand in frame, open door edge, coat hook
+Rainy return / wet dog: wet paw prints darkening the doormat, muddy reflections on the floor, towel edge already lifted, rain-grey daylight through the open doorway, jacket sleeve, damp mat, door handle still visible, small muddy trail inside
 Dinner / table: chair leg, napkin corner, crumb scatter, glass base, fork at edge of frame
 Kitchen routine: dish towel corner, counter edge, water bowl, paper towel roll, cabinet handle
 Car / outside: seat texture, seatbelt strap, window glass, dashboard reflection, grass edge
@@ -225,8 +264,9 @@ Living room / couch moment: couch cushion wrinkle, remote half-buried in blanket
 
 One or two traces only. Never a list. Only what physically appears given where the owner was sitting or standing.
 
-The traces must match the ENERGY of the scene:
+The traces must match BOTH the scenario AND the energy level:
 - A lazy couch moment: remote in blanket, TV glow, dog hair on couch
+- A wet rainy return: muddy paw prints, towel edge, grey doorway light, damp mat
 - An active kitchen moment: dish towel, counter edge, cabinet handle
 - An arriving-home moment: shoes near door, bag against wall
 Never use traces from the wrong scenario category.
