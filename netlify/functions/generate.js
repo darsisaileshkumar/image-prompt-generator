@@ -70,31 +70,67 @@ The owner's position controls:
 
 Without Layer 2, the camera floats. Cameras don't float. People hold them.
 
+## OWNER ENERGY MATCHING
+
+The owner's physical energy must match the emotional pace of the scenario.
+
+Slow / lazy / routine moments (dog on lap, sleeping, calm):  
+Owner is: already seated, didn't move, phone picked up from nearby surface, no rushing
+Camera feels: unhurried but slightly careless, steady but not composed
+
+Fast / reactive / surprising moments (dog jumping, shaking, stealing):  
+Owner is: mid-reaction, grabbing phone while still responding, one-handed, tilted
+Camera feels: rushed, slightly tilted, caught before fully ready
+
+Quiet / tender / still moments (dog waiting, resting near owner):  
+Owner is: already close, phone lifted gently from same spot, careful but lazy
+Camera feels: close range, slightly too intimate, not enough distance to frame properly
+
+Match the energy. A lazy lap moment should not have a rushed reactive camera.
+A sudden shake should not have a calm steady composition.
+
 ---
 
 ## LAYER 3 — CAMERA FAILURE
 
-Choose ONLY 1–2 failures. Never stack more than 2.
+Choose ONLY 1 dominant failure. Maximum 2 if they are from different categories.
 
-Pick failures that logically follow from Layer 2 (owner position caused this failure):
+NEVER stack: motion blur + autofocus miss + face blur + tail blur simultaneously.
+That creates an AI action scene. Real phones usually fail in ONE primary way.
 
-- autofocus locked on foreground object — dog stayed soft
-- motion blur concentrated on fast-moving parts (ears, tail) while body steadier
-- tilted frame from one-handed reactive grab
-- too much floor/wall/ceiling — wrong framing without recomposing
-- dog near frame edge or partially cropped out
-- overexposed light source in background — window, lamp, doorway
-- finger or sleeve entering corner of frame from the grab
-- foreground object partially blocking dog from where owner stood
-- dog turned away or moved right as shutter fired
-- timing failure — caught transition out of behavior, not peak
-- dark underexposure — low ambient light, phone struggled
-- phone over-sharpened moving fur creating unnatural edge artifact
-- digital grain in shadow areas from pushing ISO indoors
+Pick the failure that physically follows from Layer 2 (the owner's position caused it):
 
-State the PHYSICAL CAUSE, not the visual result.
-WRONG: "face is soft"
-RIGHT: "autofocus locked on the laundry basket so the dog stayed slightly soft"
+- autofocus locked on a foreground object — dog stayed slightly soft behind it
+- timing failure — phone came up as the behavior was already ending
+- too much dead space — floor/wall/ceiling taking over because no time to recompose
+- dog near frame edge or partially cropped from not centering before shooting
+- light source in background slightly overexposed — window, lamp, open doorway
+- foreground object partially blocking dog from where the owner was sitting or standing
+- dog shifted or turned right as the picture was taken
+- frame tilted from one-handed grab without correcting
+- dark underexposure — low ambient light, phone guessed wrong on exposure
+- slight face softness from dog moving closer or turning just before shutter
+
+## CRITICAL — OBSERVATIONAL LANGUAGE, NOT TECHNICAL NARRATION
+
+This is one of the most important rules.
+
+Humans do not think in camera terminology when they remember a photo.
+
+AI TECHNICAL VOICE (sounds fake):
+- "autofocus landing on the cushion"
+- "motion blur affecting the ears and tail"
+- "exposure imbalance from mixed light sources"
+- "bokeh on the background elements"
+
+HUMAN OBSERVATIONAL VOICE (sounds real):
+- "the cushion ended up sharper than the dog's face"
+- "one ear stretched sideways faster than the camera could handle"
+- "the window behind her came out brighter than the rest of the room"
+- "the blanket in the corner is clearer than the dog"
+
+Rule: describe what you NOTICE about the image, not what the camera DID.
+Observational = human memory. Technical = AI description.
 
 ---
 
@@ -111,9 +147,15 @@ Arriving home / entryway: shoes near door, bag against wall, someone's knee or h
 Dinner / table: chair leg, napkin corner, crumb scatter, glass base, fork at edge of frame
 Kitchen routine: dish towel corner, counter edge, water bowl, paper towel roll, cabinet handle
 Car / outside: seat texture, seatbelt strap, window glass, dashboard reflection, grass edge
-Living room: couch cushion wrinkle, remote control, charging cable, blanket fold, water bowl
+Living room / couch moment: couch cushion wrinkle, remote half-buried in blanket, charging cable on floor, old pillow edge, TV glow reflecting on side table, dog hair visible on dark couch fabric, coffee mug on side table, folded blanket corner
 
-One or two traces only. Never a list. Only what appears from where the owner physically stood.
+One or two traces only. Never a list. Only what physically appears given where the owner was sitting or standing.
+
+The traces must match the ENERGY of the scene:
+- A lazy couch moment: remote in blanket, TV glow, dog hair on couch
+- An active kitchen moment: dish towel, counter edge, cabinet handle
+- An arriving-home moment: shoes near door, bag against wall
+Never use traces from the wrong scenario category.
 
 ---
 
