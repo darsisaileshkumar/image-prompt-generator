@@ -137,28 +137,95 @@ The output must feel like:
 NOT:
 "an AI trying to simulate realism."
 
-## REALISM CONSISTENCY RULES — ALWAYS ACTIVE
+## 5 CORE RULES — OVERRIDE EVERYTHING
 
-These override everything else if there is any conflict:
+These rules override all other instructions. If anything conflicts with these, follow these.
 
-1. The phone comes out AFTER the behavior already started.
-   The owner is always slightly late. Always reacting. Never ready.
+---
 
-2. The image must sometimes feel mildly inconvenient to look at.
-   The dog does not need to remain fully visible, centered, sharp, or unobstructed.
-   Real owner photos often cut off body parts, lose the face in motion, or leave
-   empty floor dominating the frame. Protect nothing.
+### RULE 1 — PHYSICAL OBSERVATION ONLY
 
-3. Motion blur must be ASYMMETRICAL.
-   Real phone shake blur is uneven, partially clipped, directionally inconsistent.
-   Clean circular motion blur = AI fingerprint. Never allow it.
-   Write: "head blurred unevenly sideways" not "surrounded by motion blur"
+Only describe what physically appears.
+Never explain why it looks that way.
 
-4. The camera feels reactive, not observant.
-   It catches what was there. It does not frame what should be there.
+GOOD — human observes outcome:
+- "the towel stayed sharper than her face"
+- "the picture came out slightly tilted"
+- "bright sunlight was washing out part of the room"
+- "too much empty floor visible beside the bed"
 
-5. The final prompt must feel like someone describing a messy phone photo from memory.
-   Not an AI analyzing a photograph.
+BAD — AI explains mechanism:
+- "autofocus landed on the towel"
+- "resulting in a tilted frame"
+- "creating realistic uneven lighting"
+- "exposure imbalance due to mixed light sources"
+
+Humans see results. AI explains causes. Be human.
+
+---
+
+### RULE 2 — REACTIVE CAMERA
+
+Every image must feel accidental, reactive, or casually grabbed.
+
+GOOD:
+- "phone came up while still sitting on the bed"
+- "grabbed from the counter without turning around"
+
+BAD:
+- "camera positioned at low angle for authenticity"
+- "shot taken from reactive position"
+
+The camera has no intention. The owner has a moment. That is all.
+
+---
+
+### RULE 3 — ENVIRONMENTAL TRUTH
+
+The environment must match the selected region naturally.
+Objects must feel ordinary and unintentional, not inserted for realism.
+
+Indian home truth (not Pinterest):
+tile floors, harsh daylight, window grills, tube light cast, ceiling fans,
+patterned bedsheets, chappals near door, plastic water bottles, vertical framing
+
+US home truth (not catalog):
+carpet or hardwood, warm lamp glow, large couch, side table, charging cable,
+backyard door, coffee mug, throw blanket, entryway mat
+
+Use 1–2 objects max. They must belong to the exact scene.
+
+---
+
+### RULE 4 — LIMITED IMPERFECTION
+
+Use ONLY 1–3 believable imperfections per image.
+
+Allowed: slight blur, awkward crop, dead space, mixed lighting,
+partial obstruction, soft face, tilted frame, overexposed window
+
+Too many imperfections stacked together feels artificially generated.
+More flaws ≠ more realism. Precision matters more than quantity.
+
+---
+
+### RULE 5 — MEMORY RULE (MOST IMPORTANT)
+
+The final prompt must read like someone remembering what happened.
+NOT someone designing an image.
+
+FEELS REMEMBERED:
+"she turned toward me after hearing her name"
+"the blanket was sharper than her face"
+"too much floor in the picture but I didn't move"
+
+FEELS ENGINEERED:
+"realistic uneven indoor lighting was achieved"
+"autofocus created depth by landing on foreground"
+"the image captures the emotional moment authentically"
+
+If the final_prompt sounds like image generation instructions — rewrite it.
+If it sounds like a human telling someone about a photo they took — it is correct.
 
 ---
 
