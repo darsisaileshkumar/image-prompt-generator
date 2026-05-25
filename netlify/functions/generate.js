@@ -2,6 +2,114 @@
 // Uses Groq API (FREE) — Llama 3.3 70B model, no credit card needed
 // Sign up at: https://console.groq.com
 
+const REGIONAL_CONTEXT = {
+  US: `
+REGION: United States / Western home environment.
+
+Apply these environmental realities to every element of the prompt:
+
+FLOORS & SURFACES:
+- carpet in living rooms and bedrooms
+- hardwood or laminate flooring in kitchens and entryways
+- large sectional couches
+- side tables, coffee tables
+- entryway mats near front doors
+- spacious rooms with more floor visible
+
+LIGHTING:
+- warm incandescent or LED lamp light indoors
+- overcast grey daylight through large windows
+- soft indoor shadows
+- warm orange-yellow evening lamp glow
+- bright kitchen overhead lights
+
+HOME OBJECTS & CLUTTER:
+- TV remotes, throw blankets, charging cables
+- coffee mugs, water glasses
+- dog leash near the door
+- shoes by the entryway mat
+- backyard door or sliding glass door
+- grocery bags on counter
+- dog beds or crates visible
+
+HUMAN POSTURE & BEHAVIOR:
+- seated or lounging on couch
+- casual backyard or porch moments
+- one-handed phone grab from couch cushion
+- relaxed indoor framing
+- dogs allowed on furniture
+
+OUTDOOR CONTEXT (if applicable):
+- suburban sidewalks, parked cars in driveway
+- grassy lawns, fenced yards
+- dog parks with mulch or grass
+- overcast Pacific Northwest-style daylight OR bright California sun
+
+CAMERA BEHAVIOR:
+- casual couch-level or eye-level snaps
+- landscape or portrait equally common
+- unhurried but reactive
+`,
+
+  India: `
+REGION: India / South Asian home environment.
+
+Apply these environmental realities to every element of the prompt. Use subtle, accurate traces — not stereotypes.
+
+FLOORS & SURFACES:
+- smooth tile or stone flooring in all rooms (not carpet)
+- floor is visible and often the dominant surface in frame
+- patterned or solid floor tiles
+- plastic or rubber chappals (slippers) near the door
+- steel bowls or vessels near kitchen
+- plastic bucket near bathroom or balcony
+
+LIGHTING:
+- white LED or fluorescent tube light color cast (cool, slightly blue-white)
+- harsh afternoon sunlight through windows
+- mixed daylight and LED indoor lighting
+- inverter bulb glow during evenings (slightly warm but not as warm as US lamps)
+- strong overhead light creating flat shadows on tile floors
+- balcony or window light creating a sharp bright rectangle on the floor
+
+HOME OBJECTS & CLUTTER:
+- ceiling fan (often visible in frame or implied by the room)
+- steel or stainless vessels near kitchen entrance
+- patterned bedsheet or bedcover
+- thin cotton curtain moving near a window
+- drying clothes on a rack or balcony railing
+- scooter or motorbike partially visible outside window or compound
+- metal gate or grill on windows or balcony
+- plastic stool or chair
+- water bottle (steel or plastic)
+
+HUMAN POSTURE & BEHAVIOR:
+- standing near the balcony or kitchen entrance
+- sitting cross-legged on the floor or bed
+- one-handed vertical phone snap (WhatsApp-style)
+- crouched down at dog level near a tiled floor
+- quick reactive snap without sitting down
+- phone at doorway height, body staying inside
+
+OUTDOOR CONTEXT (if applicable):
+- apartment compound or colony road
+- uneven concrete or paver roads
+- scooters and autos parked on the side
+- concrete terrace with water tank visible
+- narrow lane with compound wall
+- roadside plants or neem trees
+- rain puddles on concrete after monsoon
+- strong afternoon sun creating harsh shadows
+
+CAMERA BEHAVIOR:
+- vertical quick snaps, phone held one-handed
+- tighter framing than US photos
+- faster shooting, less aesthetic intentionality
+- phone often grabbed from a surface rather than pocket
+- framing reflects where the owner was standing, not where ideal photo would be from
+`
+};
+
 const SYSTEM_PROMPT = `You are the "Human Memory Camera Engine."
 
 You do NOT generate dog images or pet portraits.
@@ -616,10 +724,11 @@ export const handler = async (event) => {
     };
   }
 
-  let scenario;
+  let scenario, region;
   try {
     const body = JSON.parse(event.body || "{}");
     scenario = body.scenario;
+    region   = body.region || "US";
   } catch {
     return {
       statusCode: 400,
@@ -658,7 +767,13 @@ export const handler = async (event) => {
         temperature: 0.92,
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: scenario.trim() },
+          {
+            role: "user",
+            content: [
+              scenario.trim(),
+              REGIONAL_CONTEXT[region] || REGIONAL_CONTEXT["US"],
+            ].join("\n\n---\n"),
+          },
         ],
         response_format: { type: "json_object" },
       }),

@@ -8,6 +8,11 @@ const EXAMPLE_SCENARIOS = [
   "Charlie refused to get out of the car after a vet visit",
 ];
 
+const REGIONS = [
+  { value: "US",    label: "🇺🇸 US / Western" },
+  { value: "India", label: "🇮🇳 India" },
+];
+
 const sectionMeta = [
   { key: "scene_analysis",   icon: "ti-eye",      label: "Scene Analysis",    color: "#185FA5", bg: "#E6F1FB" },
   { key: "human_intention",  icon: "ti-heart",    label: "Human Intention",   color: "#0F6E56", bg: "#E1F5EE" },
@@ -18,6 +23,7 @@ const sectionMeta = [
 
 export default function App() {
   const [scenario, setScenario]       = useState("");
+  const [region, setRegion]           = useState("India");
   const [result, setResult]           = useState(null);
   const [loading, setLoading]         = useState(false);
   const [error, setError]             = useState(null);
@@ -36,7 +42,7 @@ export default function App() {
       const response = await fetch("/.netlify/functions/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ scenario }),
+        body: JSON.stringify({ scenario, region }),
       });
 
       if (!response.ok) {
@@ -287,6 +293,32 @@ export default function App() {
             onChange={e => setScenario(e.target.value)}
             onKeyDown={e => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) handleGenerate(); }}
           />
+          <div style={{ marginTop: 10, marginBottom: 12 }}>
+            <span className="hmce-label" style={{ marginBottom: 8 }}>Region</span>
+            <div style={{ display: "flex", gap: 8 }}>
+              {REGIONS.map(r => (
+                <button
+                  key={r.value}
+                  id={`region-${r.value.toLowerCase()}`}
+                  onClick={() => setRegion(r.value)}
+                  style={{
+                    fontFamily: "'Source Serif 4', Georgia, serif",
+                    fontSize: 13,
+                    padding: "6px 16px",
+                    borderRadius: 20,
+                    border: region === r.value ? "1.5px solid #1A1916" : "0.5px solid #D4D3CF",
+                    background: region === r.value ? "#1A1916" : "transparent",
+                    color: region === r.value ? "#fff" : "#6B6862",
+                    cursor: "pointer",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {r.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 8, gap: 8 }}>
             <span style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: 11, color: "#9D9B96", fontStyle: "italic" }}>
               ⌘↵ to generate
