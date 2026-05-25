@@ -6,50 +6,55 @@ const REGIONAL_CONTEXT = {
   US: `
 REGION: United States / Western home environment.
 
-Apply these environmental realities to every element of the prompt:
+Apply these environmental realities naturally. Objects must feel ordinary and unintentional.
 
 FLOORS & SURFACES:
 - carpet in living rooms and bedrooms
 - hardwood or laminate flooring in kitchens and entryways
-- large sectional couches
-- side tables, coffee tables
+- large sectional or L-shaped couches with throw blankets
+- coffee tables, side tables, charging cables
 - entryway mats near front doors
-- spacious rooms with more floor visible
+- spacious rooms where floor often dominates the lower frame
 
-LIGHTING:
-- warm incandescent or LED lamp light indoors
-- overcast grey daylight through large windows
-- soft indoor shadows
-- warm orange-yellow evening lamp glow
-- bright kitchen overhead lights
+LIGHTING — DESCRIBE PHYSICALLY, NOT TECHNICALLY:
+- warm lamp light from one side leaving the background dimmer
+- overcast grey daylight through large windows (not harsh)
+- soft indoor shadows on carpet or hardwood
+- warm orange-yellow evening lamp glow on surfaces near the couch
+- TV screen glow casting faint light on nearby objects
 
-HOME OBJECTS & CLUTTER:
-- TV remotes, throw blankets, charging cables
-- coffee mugs, water glasses
-- dog leash near the door
-- shoes by the entryway mat
-- backyard door or sliding glass door
-- grocery bags on counter
-- dog beds or crates visible
+HOME OBJECTS — USE 1-2 ONLY, CONTEXTUALLY:
+Living room: TV remote, throw blanket, charging cable, coffee mug, side table lamp
+Bedroom: charger cable, pillow corner, rumpled sheets, lamp base, water glass
+Kitchen: dish towel, grocery bag on counter, water bowl, cabinet edge
+Entryway: shoes by mat, dog leash, coat hook, bag against wall
+Outdoor/backyard: grass edge, fence post, patio furniture, overcast sky
 
 HUMAN POSTURE & BEHAVIOR:
-- seated or lounging on couch
-- casual backyard or porch moments
-- one-handed phone grab from couch cushion
-- relaxed indoor framing
-- dogs allowed on furniture
+- lounging on couch, phone grabbed from cushion gap or side table
+- still lying in bed, arm reaching for nightstand phone
+- one-handed shot without standing up
+- casual eye-level or couch-level snap
+- dogs allowed on furniture — owner often at same height as dog
+- relaxed suburban outdoor moments, not physically demanding
 
 OUTDOOR CONTEXT (if applicable):
-- suburban sidewalks, parked cars in driveway
-- grassy lawns, fenced yards
-- dog parks with mulch or grass
-- overcast Pacific Northwest-style daylight OR bright California sun
+- suburban sidewalk with parked cars
+- grassy lawn, fenced backyard
+- dog park: mulch, grass, wood chips
+- muted overcast daylight OR warm afternoon sun on concrete
 
 CAMERA BEHAVIOR:
-- casual couch-level or eye-level snaps
-- landscape or portrait equally common
-- unhurried but reactive
+- phone grabbed from couch cushion, side table, or counter
+- unhurried but reactive — phone came out after the behavior started
+- too much ceiling or empty couch visible from lying-down angle
+- portrait or landscape equally common
+- slightly tilted from one-handed grab
+
+GOLD STANDARD US EXAMPLE:
+"phone came up from the couch cushion while she was already climbing onto the armrest — one hand still under her chest, her head turned sideways and a little blurry from moving too fast — the throw blanket stayed sharper than her face, too much empty couch visible above her, and the TV remote half buried near the edge of the frame"
 `,
+
 
   India: `
 REGION: India / South Asian home environment.
@@ -229,34 +234,122 @@ If it sounds like a human telling someone about a photo they took — it is corr
 
 ---
 
-## THE CORE PIPELINE
+## THE 7-LAYER REALISM STACK
 
-Every generation runs through this thinking process internally:
+Every prompt must naturally contain all 7 layers.
+Think through each layer internally before writing the final_prompt.
 
-SCENARIO IN → 5-Layer Analysis → Failed Memory Photo Description OUT
+SCENARIO IN → 7-Layer Thinking → Human Memory Photo Description OUT
 
-The 5 layers must all be present in every output.
+---
+
+### LAYER 1 — REACTIVE TRIGGER
+
+Why did the phone come out?
+This is the human cause of the image.
+
+Examples:
+"phone came up from the couch cushion"
+"grabbed the phone while still seated"
+"didn't stand up before taking it"
+"phone came out halfway through the walk"
+
+Without this: the image feels generated, not found.
 
 ---
 
-## LAYER 1 — EMOTIONAL MEMORY
+### LAYER 2 — DOG PHYSICAL STATE
 
-What behavior or routine is happening in this scenario?
+Describe ONLY visible behavior. Never explain emotions.
 
-This is NOT visual. It is behavioral.
+GOOD (visible):
+"ears lifting slightly"
+"turning toward the sound"
+"paws hanging off the edge"
+"head blurred from shaking"
+"eyes half sleepy"
 
-Examples of strong Layer 1 reads:
-- dog testing a rule they know they're breaking
-- dog doing a sound/behavior they only do for certain people
-- dog stealing something and looking guilty
-- dog doing their post-bath routine before the owner is ready
-- dog being surprisingly gentle during a chaotic moment
-- dog ignoring a command in the most inconvenient way possible
-- dog doing something they've been caught doing before
+BAD (explained emotions):
+"feeling confused" / "looking happy" / "seeming relaxed"
 
-The behavior creates the emotional reason the phone came out.
+Show. Never explain.
 
 ---
+
+### LAYER 3 — FOCUS IMPERFECTION
+
+One believable focus failure. Described as an observed outcome.
+
+GOOD:
+"blanket stayed sharper than her face"
+"doorway edge clearer than the dog"
+"her face still a little blurry from turning"
+
+BAD:
+"autofocus technically missed"
+"lens behavior created depth"
+
+---
+
+### LAYER 4 — ACCIDENTAL FRAMING
+
+Real phone photos are messy. Use 1–2 framing problems only.
+
+"too much ceiling in the picture"
+"too much empty floor beside her"
+"object cutting into the left edge of the frame"
+"awkward crop at the bottom"
+"dead space above the dog"
+
+Too many framing problems at once becomes fake.
+
+---
+
+### LAYER 5 — LIVED-IN OBJECTS
+
+Objects create subconscious realism. Use 1–2 max.
+They must belong to the exact scenario — never randomly inserted.
+
+US: coffee mug, throw blanket, charger cable, TV remote, side table lamp
+India: plastic water bottle, patterned bedsheet, grill window, chappals, tile floor
+
+Objects must feel unplanned. They are what was already there.
+
+---
+
+### LAYER 6 — LIGHTING TRUTH
+
+Describe physical light as observed. Never analyze it technically.
+
+GOOD:
+"warm lamp light from one side leaving the background dimmer"
+"afternoon sunlight washing across the tile floor near the window"
+"the window came out much brighter than the rest of the room"
+
+BAD:
+"realistic lighting" / "cinematic shadows" / "balanced exposure" / "creating contrast"
+
+---
+
+### LAYER 7 — HUMAN CAMERA BEHAVIOR
+
+The image must feel: late, rushed, reactive, lazy, casual, one-handed, not repositioned.
+
+GOOD:
+"phone came up while still sitting on the bed"
+"grabbed it from the couch without leaning forward"
+"one-handed, phone slightly tilted from the reach"
+
+BAD:
+"camera positioned at low angle for authenticity"
+"shot taken deliberately without repositioning"
+
+The camera has no intention. The owner had a moment. That is all.
+
+---
+
+Final output = all 7 layers woven into 1–3 natural observational sentences.
+
 
 ## LAYER 2 — REAL OWNER REACTION
 
@@ -786,21 +879,19 @@ No preamble. No markdown. No explanation. Just the JSON object.
 
 ---
 
-## FINAL QUALITY CHECK
+## FINAL QUALITY CHECK — 7 LAYERS
 
-✓ Layer 1: Is the specific dog behavior or routine identified?
-✓ Layer 2: Is the owner's exact body position and physical state described — what are they holding?
-✓ Layer 3: Are there ONLY 1–2 failures described as visible observations (not camera actions)?
-✓ Layer 4: Are there 1–2 environmental traces contextually tied to this specific scenario?
-✓ Layer 5: Are ALL banned words absent? Is "resulting in" completely gone?
-✓ Dog continuity: Does the prompt describe ZERO physical dog appearance details?
-✓ Asymmetric blur: Is motion blur uneven and directional — NOT clean circular?
-✓ Subject position: Is the dog off-center, partially cropped, or blocked by something?
-✓ Timing: Does the phone come out AFTER the behavior already started?
-✓ Physical inconvenience: Does the owner feel slightly occupied, reactive, or awkward?
-✓ Memory test: Does the final_prompt sound like someone describing a photo they forgot they took — not an AI analyzing an image?
-✓ Narrative style: Does the prompt start with the chosen style (A/B/C/D/E)?
-✓ Failure diversity: Is the framing/exposure type varied from the default?
+✓ L1 Reactive Trigger: Does the prompt say WHY the phone came out (physical cause)?
+✓ L2 Dog Physical State: Is dog behavior described visibly — no emotions explained?
+✓ L3 Focus Imperfection: Is there ONE focus failure described as an observed outcome (not camera action)?
+✓ L4 Accidental Framing: Is there 1–2 framing problems — dead space, awkward crop, or object intrusion?
+✓ L5 Lived-In Objects: Are there 1–2 objects that logically belong to this exact scene?
+✓ L6 Lighting Truth: Is light described physically ("warm lamp from one side") not technically ("realistic lighting")?
+✓ L7 Human Camera Behavior: Does the owner feel late, reactive, or physically occupied — never prepared?
+✓ Dog continuity: Zero physical appearance details about the dog?
+✓ Memory test: Does this sound like someone remembering a moment — NOT an AI designing an image?
+✓ Density: Is the final_prompt 1–3 sentences? No forensic paragraphs?
+✓ Banned words: "resulting in", "autofocus landed", "creating contrast", "realistic" all absent?
 
 If ANY answer is NO — rewrite before outputting.`;
 
