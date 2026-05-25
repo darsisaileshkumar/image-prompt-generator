@@ -54,59 +54,75 @@ CAMERA BEHAVIOR:
   India: `
 REGION: India / South Asian home environment.
 
-Apply these environmental realities to every element of the prompt. Use subtle, accurate traces — not stereotypes.
+Apply these environmental realities to every element of the prompt.
+Use subtle, accurate domestic truth — NOT cinematic India, NOT stereotypes.
 
 FLOORS & SURFACES:
-- smooth tile or stone flooring in all rooms (not carpet)
-- floor is visible and often the dominant surface in frame
-- patterned or solid floor tiles
-- plastic or rubber chappals (slippers) near the door
-- steel bowls or vessels near kitchen
-- plastic bucket near bathroom or balcony
+- smooth tile or stone flooring in all rooms (never carpet)
+- floor is visible and often the dominant surface in the lower frame
+- patterned or plain ceramic tiles catching sharp blocks of afternoon sunlight
+- plastic or rubber chappals (slippers) near the door — never "shoes"
+- steel or stainless bowls near kitchen entrance
 
-LIGHTING:
-- white LED or fluorescent tube light color cast (cool, slightly blue-white)
-- harsh afternoon sunlight through windows
-- mixed daylight and LED indoor lighting
-- inverter bulb glow during evenings (slightly warm but not as warm as US lamps)
-- strong overhead light creating flat shadows on tile floors
-- balcony or window light creating a sharp bright rectangle on the floor
+LIGHTING — THIS IS CRITICAL FOR INDIA REALISM:
+- white LED or fluorescent tube light: cool, slightly blue-white color cast across surfaces
+- harsh afternoon sunlight creating sharp bright rectangles on the tile floor near windows
+- uneven mix of warm outdoor daylight and cool indoor tube light
+- balcony or window light spilling a strong bright block onto the floor
+- hot afternoon stillness implied by the quality of the light
+- evening inverter bulb: slightly warm but not the soft amber of a US lamp
+- NO soft cinematic western lamp glow unless it is explicitly an evening scene
 
-HOME OBJECTS & CLUTTER:
-- ceiling fan (often visible in frame or implied by the room)
-- steel or stainless vessels near kitchen entrance
-- patterned bedsheet or bedcover
-- thin cotton curtain moving near a window
-- drying clothes on a rack or balcony railing
-- scooter or motorbike partially visible outside window or compound
-- metal gate or grill on windows or balcony
-- plastic stool or chair
-- water bottle (steel or plastic)
+HOME OBJECTS — USE 1-2 ONLY, CONTEXTUALLY:
+Bedroom: patterned bedsheet, plastic water bottle on bedside, thin cotton curtain near window grill, ceiling fan
+Living room/hall: ceiling fan, plastic chair, steel water bottle, thin curtain
+Kitchen: steel vessels, plastic bucket near wall, dish rack, water filter
+Balcony/door: metal window grill, drying clothes on rack, chappals near threshold
+Outside compound: concrete floor, scooter partially visible, colony road, compound wall
 
 HUMAN POSTURE & BEHAVIOR:
-- standing near the balcony or kitchen entrance
-- sitting cross-legged on the floor or bed
-- one-handed vertical phone snap (WhatsApp-style)
-- crouched down at dog level near a tiled floor
-- quick reactive snap without sitting down
-- phone at doorway height, body staying inside
+- sitting or lying on the bed (common for bedroom dog moments)
+- hand reaching into frame from the side while still lying down
+- standing near balcony or doorway, body not fully turned
+- one-handed vertical phone snap — WhatsApp-style, practical
+- crouched at dog level on tile floor
+- phone grabbed from nearby surface without repositioning
+- reactive timing: phone comes out AFTER the dog behavior already started
 
 OUTDOOR CONTEXT (if applicable):
-- apartment compound or colony road
-- uneven concrete or paver roads
-- scooters and autos parked on the side
-- concrete terrace with water tank visible
-- narrow lane with compound wall
-- roadside plants or neem trees
+- apartment compound or colony road (not "park" or "yard")
+- uneven concrete or paver surface
+- scooters and autos parked at the side
+- concrete terrace with water tank edge visible
+- narrow lane, compound wall with gate
 - rain puddles on concrete after monsoon
-- strong afternoon sun creating harsh shadows
+- strong afternoon sun creating hard shadows on concrete
 
-CAMERA BEHAVIOR:
-- vertical quick snaps, phone held one-handed
-- tighter framing than US photos
-- faster shooting, less aesthetic intentionality
-- phone often grabbed from a surface rather than pocket
-- framing reflects where the owner was standing, not where ideal photo would be from
+OBSERVATIONAL LANGUAGE FOR INDIA PROMPTS:
+Describe what appears — not what the camera did.
+
+BAD: "the dog's face is slightly soft"
+GOOD: "her face still a little blurry from turning toward me"
+
+BAD: "as I speak her name"
+GOOD: "after hearing her name" or "turning toward the sound"
+
+BAD: "autofocus landed on the bedsheet"
+GOOD: "the bedsheet stayed sharper than her face"
+
+BAD: "harsh Indian daylight"
+GOOD: "sharp block of afternoon sunlight on the tile floor near the window"
+
+GOLD STANDARD INDIA BEDROOM EXAMPLE:
+"her face still a little blurry from turning toward me after hearing her name, ears perked but eyes half sleepy from the nap, with my hand reaching into the lower corner of the picture from the side of the bed — patterned bedsheet wrinkled under her paws, smooth tile floor catching a sharp block of afternoon sunlight near the window, thin curtain moving slightly beside the grill, and a plastic water bottle left on the bedside table in the background"
+
+Notice:
+- no analytical language
+- no stereotypes
+- tile floor, patterned bedsheet, curtain + grill, plastic water bottle
+- afternoon light as a sharp floor rectangle, not soft lamp glow
+- hand entering frame naturally from owner lying on bed
+- dog described by behavior and position only, no appearance details
 `
 };
 
@@ -293,6 +309,12 @@ HUMAN OBSERVATIONAL VOICE (sounds real):
 - "towel already half lifted before the dog shook again" ← action, not prediction
 
 CONVERSION TABLE — replace every analytical phrase with visible observation:
+
+INSTEAD OF: "the dog's face is slightly soft"
+USE: "her face still a little blurry from turning toward me"
+
+INSTEAD OF: "as I speak her name" / "while calling her name"
+USE: "after hearing her name" or "turning toward the sound"
 
 INSTEAD OF: "resulting in the dog's face being soft"
 USE: "the dog's face stayed slightly soft from the movement"
