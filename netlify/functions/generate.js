@@ -121,13 +121,28 @@ GOOD: "sharp block of afternoon sunlight on the tile floor near the window"
 GOLD STANDARD INDIA BEDROOM EXAMPLE:
 "her face still a little blurry from turning toward me after hearing her name, ears perked but eyes half sleepy from the nap, with my hand reaching into the lower corner of the picture from the side of the bed — patterned bedsheet wrinkled under her paws, smooth tile floor catching a sharp block of afternoon sunlight near the window, thin curtain moving slightly beside the grill, and a plastic water bottle left on the bedside table in the background"
 
-Notice:
-- no analytical language
-- no stereotypes
-- tile floor, patterned bedsheet, curtain + grill, plastic water bottle
-- afternoon light as a sharp floor rectangle, not soft lamp glow
-- hand entering frame naturally from owner lying on bed
-- dog described by behavior and position only, no appearance details
+IMPORTANT — SCENARIO-SPECIFIC INDIA ENVIRONMENTS:
+Match the environment to the exact scenario. Never recycle.
+
+Living room / dog near sofa:
+Sofa cover, remote on armrest, TV glow, tile floor, slipper near the sofa leg, charger cable on floor, ceiling fan shadow, compact room
+
+Kitchen / dog begging or near food:
+Steel vessels on counter, tap visible, tile backsplash, plastic stool, floor mat near the stove, water filter corner, damp floor near sink
+
+Balcony / dog at grill:
+Concrete balcony floor, metal grill bars, afternoon sun making strong bar shadows on the floor, drying clothes on the railing, outside sounds implied, compound wall visible below
+
+Entrance / dog greeting:
+Tile floor near front door, chappals scattered near the threshold, door frame visible, bag on the floor, afternoon light from outside stronger than inside
+
+Terrace / outdoor:
+Concrete terrace floor, water tank visible in background, compound wall edge, strong afternoon sun, scooter sound from below implied, harsh shadows
+
+Bedroom / resting or sleeping dog:
+Patterned bedsheet, plastic water bottle on bedside, thin cotton curtain near window grill, afternoon sunlight block on tile floor, ceiling fan above
+
+NEVER use bedroom objects (bedsheet, water bottle, curtains) for a living room, kitchen, or outdoor scenario.
 `
 };
 
@@ -240,6 +255,44 @@ Every prompt must naturally contain all 7 layers.
 Think through each layer internally before writing the final_prompt.
 
 SCENARIO IN → 7-Layer Thinking → Human Memory Photo Description OUT
+
+---
+
+## ⛔ SCENARIO TRANSLATION RULE — DO THIS FIRST
+
+Before building any layer, answer this question:
+
+WHAT ROOM OR SETTING DOES THIS SCENARIO PHYSICALLY TAKE PLACE IN?
+
+The answer controls EVERYTHING:
+- what objects appear
+- what light source is present
+- how the owner is positioned
+- what framing makes sense
+
+Scenario → Setting mapping (build from here, not from templates):
+
+"dog under the sofa / dropped toy" → living room floor, low angle, sofa leg, tile
+"dog begging at kitchen" → kitchen, counter, steel vessel, floor mat, damp surface
+"dog at front door / greeting" → entrance, chappals, door frame, tile near threshold
+"dog on balcony / at grill" → balcony, concrete floor, grill bars, afternoon sun shadows
+"dog on bed / sleeping" → bedroom, patterned bedsheet, water bottle, curtain, grill
+"dog on sofa / lap" → living room, sofa cover, remote, TV glow, ceiling fan
+"dog at terrace / outdoor" → concrete terrace, water tank, compound wall, harsh sun
+"dog on walk / outside" → colony road, uneven pavement, scooters, compound wall
+
+DO NOT RECYCLE these across unrelated scenarios:
+- bedsheets → only for bedroom scenarios
+- curtains near grill → only for bedroom or balcony scenarios
+- water bottle on bedside → only for bedroom scenarios
+- sleepy/nap behavior → only if scenario describes rest
+- sunlight on bedroom floor → only for bedroom scenarios
+
+If the scenario is in the living room: use sofa, remote, tile, ceiling fan, charger
+If the scenario is in the kitchen: use steel vessel, tap, floor mat, counter
+If the scenario is at the entrance: use chappals, door frame, bag on floor
+
+Mismatch between scenario and environment = immediate realism failure.
 
 ---
 
